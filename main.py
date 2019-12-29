@@ -6,9 +6,9 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def search():
-    if request.method == 'POST': #判斷request.method是否來自POST
-        target = request.values['keyword']   #取得keyword的值存進target
-        file = open('/Users/wan/segmentation_of_word/ans_file.txt','r', encoding = 'utf-8') #開啟檔案,須以r讀模式
+    if request.method == 'POST': 
+        target = request.values['keyword'] 
+        file = open('/Users/wan/segmentation_of_word/ans_file.txt','r', encoding = 'utf-8') 
         text = file.readlines()
         #retString = "<h1>Here is the results of {}</h1>".format(target)
         word = []
